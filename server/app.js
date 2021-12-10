@@ -3,8 +3,10 @@ const { graphqlHTTP } = require('express-graphql')
 const schema = require('./schema/schema')
 const { MongoClient } = require('mongodb');
 const mongoose = require('mongoose');
+const cors = require('cors')
 
 const app = express()
+app.use(cors())
 
 const uri = "mongodb+srv://test:nopass@cluster0.xdcqp.mongodb.net/Cluster0?retryWrites=true&w=majority";
 
